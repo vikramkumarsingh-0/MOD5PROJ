@@ -17,7 +17,7 @@ if fl is not None:
     df = pd.read_csv(filename)
 else:
     os.chdir(r"vikramkumarsingh-0/MOD5PROJ")
-    df = pd.read_csv("Superstore.xlsx")
+    df = pd.read_csv("Superstore")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
