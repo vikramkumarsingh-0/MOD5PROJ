@@ -16,7 +16,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_excel(filename)
 else:
-    df = pd.read_excel("Superstore.xlsx")
+    df = pd.read_excel("Superstore")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
