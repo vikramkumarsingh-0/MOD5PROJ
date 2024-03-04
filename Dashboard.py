@@ -16,7 +16,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_csv(filename)
 else:
-    os.chdir(r"https://github.com/vikramkumarsingh-0/MOD5PROJ/")
+    os.chdir(r"https://github.com/vikramkumarsingh-0/MOD5PROJ")
     df = pd.read_csv("Superstore.xlsx")
 
 col1, col2 = st.columns((2))
