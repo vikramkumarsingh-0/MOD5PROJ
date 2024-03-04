@@ -14,10 +14,10 @@ fl = st.file_uploader(":file_folder: Upload a file",type=(["csv","txt","xlsx","x
 if fl is not None:
     filename = fl.name
     st.write(filename)
-    df = pd.read_csv(filename, encoding = "ISO-8859-1")
+    df = pd.read_csv(filename)
 else:
-    os.chdir(r"C:\Users\vikra\OneDrive\Desktop\ProjectReport\CM_5")
-    df = pd.read_csv("Adidas.xlsx", encoding = "ISO-8859-1")
+    os.chdir(r"mod5proj/Superstore.xls")
+    df = pd.read_csv("Superstore.xlsx")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
