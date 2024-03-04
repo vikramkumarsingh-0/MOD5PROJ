@@ -16,8 +16,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_csv(filename)
 else:
-    os.chdir(r"/MOD5PROJ")
-    df = pd.read_csv("Superstore")
+    df = pd.read_csv("Superstore.xlsx")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
