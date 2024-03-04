@@ -14,9 +14,9 @@ fl = st.file_uploader(":file_folder: Upload a file",type=(["csv","txt","xlsx","x
 if fl is not None:
     filename = fl.name
     st.write(filename)
-    df = pd.read_csv(filename)
+    df = pd.read_excel(filename)
 else:
-    df = pd.read_csv("Superstore.xlsx")
+    df = pd.read_excel("Superstore.xlsx")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
